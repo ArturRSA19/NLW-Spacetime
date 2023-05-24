@@ -51,7 +51,7 @@ export default function Home() {
             className="underline hover:text-gray-50"
             href="https://github.com/ArturRSA19"
           >
-            Artur!
+            Artur! 💻
           </a>
         </div>
       </div>
