@@ -2,8 +2,11 @@ import { Copyright } from '@/components/Copyright'
 import { Hero } from '@/components/Hero'
 import { Cadastro } from '@/components/Cadastro'
 import { EmptyMemories } from '@/components/EmptyMemories'
+import { cookies } from 'next/headers'
 
 export default function Home() {
+  const isAuthenticated = cookies().has('token')
+
   return (
     <main className="grid min-h-screen grid-cols-2">
       {/* Esquerda */}
