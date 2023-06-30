@@ -21,6 +21,7 @@ app.register(authRoutes)
 app
   .listen({
     port: 3333,
+    host: '0.0.0.0',
   })
   .then(() => {
     // Assim que o server estiver no ar, execute:
