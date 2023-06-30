@@ -3,6 +3,7 @@ import { Hero } from '@/components/Hero'
 import { Cadastro } from '@/components/Cadastro'
 import { EmptyMemories } from '@/components/EmptyMemories'
 import { cookies } from 'next/headers'
+import { Profile } from '@/components/Profile'
 
 export default function Home() {
   const isAuthenticated = cookies().has('token')
@@ -15,7 +16,7 @@ export default function Home() {
         <div className="absolute bottom-0 right-0 top-0 w-2 bg-stripes pr-2" />
 
         {/* Cadastro */}
-        <Cadastro />
+        {isAuthenticated ? <Profile /> : <Cadastro />}
 
         {/* Hero */}
         <Hero />
